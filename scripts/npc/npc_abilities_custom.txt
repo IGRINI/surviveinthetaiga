@@ -1,0 +1,110 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// 												Gathering
+	//=================================================================================================================
+	"gathering"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_NONE"
+		"AbilityCastPoint"				"0.4"
+		"AbilityTextureName"			"gathering"
+		"AbilityCastRange"				"175"
+		"MaxLevel"						"1"
+		"AbilityCooldown"				"1"
+    	"AoERadius"               		"150"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"woodmin"				"1"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"woodmax"				"5"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stonemin"				"1"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stonemax"				"10"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"treemultiplier"		"0.2"
+			}
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"abilities/gathering.lua"
+				"Function"				"Gather"
+			}
+		}
+	}
+	"light_a_fire"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/light_a_fire.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityCastPoint"				"0.0"
+		"AbilityTextureName"			"light_a_fire"
+		"AbilityCastRange"				"0"
+		"MaxLevel"						"1"
+		"AbilityCooldown"				"6"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"defaultchance"			"80"
+			}
+		}
+		"precache"
+		{
+			"particle"  				"particles/dire_fx/fire_barracks.vpcf"
+		}
+	}
+	"crafting"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityTextureName"			"crafting"
+	}
+	"craft_bonfire"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/craft_bonfire.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityTextureName"			"craft_bonfire"
+		"MaxLevel"						"1"
+		"AbilityCooldown"				"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"wood"					"15"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stone"					"7"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"craftingtime"			"2.0"
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+"DOTAUnits"
+{
+	//=================================================================================	
+	// 								BONFIRE
+	//=================================================================================
+	"bonfire"	
+	{
+		"Model"						"models/props_debris/camp_fire001.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Level"						"1"
+		"ModelScale" 				"1"
+		"Ability1"					"light_a_fire"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"ArmorPhysical"				"0"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
+		"AttackRate"				"0"
+		"AttackAnimationPoint"		"0"
+		"AttackAcquisitionRange"	"0"
+		"AttackRange"				"0"
+		"RingRadius"				"50"
+		"HealthBarOffset"			"110"
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0.0"
+		"VisionDaytimeRange"		"0"
+		"VisionNighttimeRange"		"0"
+		"TeamName"					"DOTA_TEAM_GOODGUYS"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+}

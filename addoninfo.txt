@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+  "TeamCount" "1"
+  "maps"      "surviveintaiga"
+  "IsPlayable"  "1"
+  "surviveintaiga"
+  {
+          "MaxPlayers"                    "10"
+  }
+}

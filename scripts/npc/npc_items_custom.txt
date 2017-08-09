@@ -1,0 +1,193 @@
+"DOTAAbilities"
+{
+	"item_bonfire"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"bonfire"
+    	"ID"                    		"3000"
+    	"AbilityBehavior"       		"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+    	"Model"                 		"models/props_debris/camp_fire001.vmdl"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_NONE"
+		"AbilityCastRange"				"200"
+    	"Effect"                		"particles/generic_gameplay/dropped_item.vpcf"
+	    "AbilityCastPoint"      		"0.0"
+	    "AbilityCooldown"       		"2"
+    	"ItemQuality"           		"common"
+	    "AbilityManaCost"       		"0"
+	    "ItemCost"              		"0"
+	    "ItemPurchasable"       		"0"
+	    "ItemShareability"      		"ITEM_NOT_SHAREABLE"
+	    "ItemDeclarations"      		"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	    "ItemPurchasable"       		"0"
+	    "ItemSellable"          		"0"
+	    "ItemInitialCharges" 			"1"
+	    "ItemStackable" 				"1"
+	    "ItemPermanent" 				"0"
+	    "ItemRequiresCharges" 			"1"
+    	"AoERadius"               		"50"
+	    "ItemDisassembleRule"   		"DOTA_ITEM_DISASSEMBLE_NEVER"
+	    "OnSpellStart"
+	    {
+	    	"SpawnUnit"
+	    	{
+	    		"UnitName"		"bonfire"
+	    		"Target" 		"POINT"
+	    		"Duration"		"0"
+	    		"UnitCount"		"1"
+	    		"UnitLimit"		"0"
+	    		"GrantsGold"	"0"
+	    		"GrantsXP"		"0"
+	    		"SpawnRadius"	"0"
+	    	}
+	    	"SpendCharge" {}
+	    }
+	}
+	"item_rat_meat"
+	{
+		"BaseClass"             		"item_lua"
+    	"ScriptFile"					"food/item_rat_meat.lua"
+		"AbilityTextureName"			"rat_meat"
+    	"ID"                    		"3001"
+    	"AbilityBehavior"       		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    	"Model"                 		"models/props_wildlife/wildlife_rat001.vmdl"
+    	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+    	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityCastRange"				"200"
+    	"Effect"                		"particles/econ/items/pudge/pudge_bloodlust_fork/pudge_bloodlust_fork.vpcf"
+	    "AbilityCastPoint"      		"0.0"
+	    "AbilityCooldown"       		"4"
+	    "AbilityManaCost"       		"0"
+	    "ItemCost"              		"0"
+	    "ItemPurchasable"       		"0"
+	    "ItemShareability"      		"ITEM_NOT_SHAREABLE"
+	    "ItemPurchasable"       		"0"
+	    "ItemSellable"          		"0"
+	    "ItemInitialCharges" 			"1"
+	    "ItemStackable" 				"1"
+	    "ItemPermanent" 				"0"
+	    "ItemRequiresCharges" 			"1"
+	    "ItemDisassembleRule"   		"DOTA_ITEM_DISASSEMBLE_NEVER"
+	    "AbilitySpecial"
+	    {
+	    	"01"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"vreamyacasta"			"5.0"
+	    	}
+	    	"02"
+	    	{
+	    		"var_type"				"FIELD_INTEGER"
+	    		"hansesliprervano"		"75"
+	    	}
+	    	"03"
+	    	{
+	    		"var_type"				"FIELD_INTEGER"
+	    		"hanseslinorm"			"55"
+	    	}
+	    	"04"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"dlitelnostsitostiesliprervano"	"2.0"
+	    	}
+	    	"05"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"dlitelnostnesvareniaesliprervano" "8.0"
+	    	}
+	    	"06"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"dlitelnostsitosti" 	"8.0"
+	    	}
+	    	"07"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"dlitelnostnesvarenia" 	"4.0"
+	    	}
+	    	"08"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"regen" 				"5.0"
+	    	}
+	    	"09"
+	    	{
+	    		"var_type"				"FIELD_INTEGER"
+	    		"eat"					"3"
+	    	}
+	    }
+	}
+	"item_fried_rat"
+	{
+		"BaseClass"             		"item_lua"
+    	"ScriptFile"					"food/item_fried_rat.lua"
+		"AbilityTextureName"			"fried_rat"
+    	"ID"                    		"3002"
+    	"AbilityBehavior"       		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    	"Model"                 		"models/props_wildlife/wildlife_rat001.vmdl"
+    	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+    	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityCastRange"				"200"
+    	"Effect"                		"particles/econ/items/pudge/pudge_bloodlust_fork/pudge_bloodlust_fork.vpcf"
+	    "AbilityCastPoint"      		"0.0"
+	    "AbilityCooldown"       		"4"
+	    "AbilityManaCost"       		"0"
+	    "ItemCost"              		"0"
+	    "ItemPurchasable"       		"0"
+	    "ItemShareability"      		"ITEM_NOT_SHAREABLE"
+	    "ItemPurchasable"       		"0"
+	    "ItemSellable"          		"0"
+	    "ItemInitialCharges" 			"1"
+	    "ItemStackable" 				"1"
+	    "ItemPermanent" 				"0"
+	    "ItemRequiresCharges" 			"1"
+	    "ItemDisassembleRule"   		"DOTA_ITEM_DISASSEMBLE_NEVER"
+	    "AbilitySpecial"
+	    {
+	    	"01"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"vreamyacasta"			"4.0"
+	    	}
+	    	"02"
+	    	{
+	    		"var_type"				"FIELD_INTEGER"
+	    		"hansesliprervano"		"45"
+	    	}
+	    	"03"
+	    	{
+	    		"var_type"				"FIELD_INTEGER"
+	    		"hanseslinorm"			"10"
+	    	}
+	    	"04"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"dlitelnostsitostiesliprervano"	"5.0"
+	    	}
+	    	"05"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"dlitelnostnesvareniaesliprervano" "6.0"
+	    	}
+	    	"06"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"dlitelnostsitosti" 	"15.0"
+	    	}
+	    	"07"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"dlitelnostnesvarenia" 	"2.0"
+	    	}
+	    	"08"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"regen" 				"10.0"
+	    	}
+	    	"09"
+	    	{
+	    		"var_type"				"FIELD_INTEGER"
+	    		"eat"					"7"
+	    	}
+	    }
+	}
+}
